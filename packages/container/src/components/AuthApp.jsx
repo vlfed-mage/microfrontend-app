@@ -1,20 +1,22 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-export default () => {
+export default ({ onSignIn }) => {
   const ref = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
   const onParentNavigateRef = useRef(null);
 
-  // Mount the microfrontend once
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
       initialPath: location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
         navigate(nextPathname);
       },
+      onSignIn,
+      createRoot,
     });
 
     onParentNavigateRef.current = onParentNavigate;
