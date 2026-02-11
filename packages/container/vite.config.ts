@@ -53,6 +53,18 @@ export default defineConfig({
           singleton: true,
           requiredVersion: '^6.20.1',
         },
+        '@mui/material': {
+          singleton: true,
+          requiredVersion: '^5.14.20',
+        },
+        '@emotion/react': {
+          singleton: true,
+          requiredVersion: '^11.11.1',
+        },
+        '@emotion/styled': {
+          singleton: true,
+          requiredVersion: '^11.11.0',
+        },
       },
     }),
   ],
