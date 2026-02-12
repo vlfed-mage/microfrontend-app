@@ -70,7 +70,7 @@ export default defineConfig({
   ],
   build: {
     target: 'esnext',
-    minify: false,
+    minify: true,
     cssCodeSplit: false,
   },
   server: {
