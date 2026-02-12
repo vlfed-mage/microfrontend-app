@@ -46,7 +46,7 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Home Page
+              Home Page - Deployed with Vite
             </Typography>
             <Typography
               variant="h5"
